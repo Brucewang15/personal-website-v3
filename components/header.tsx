@@ -10,12 +10,23 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 w-full py-4 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="max-w-screen-lg mx-auto rounded-lg border border-gray-700 bg-black p-4">
+        <div className="max-w-screen-lg mx-auto rounded-lg border border-gray-700 px-4 py-3">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
+            <div className="flex items-center space-x-6">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
                 Bruce Wang
               </h1>
+              <nav className="hidden md:flex space-x-4">
+                <a href="/" className="text-zinc-400 hover:text-foreground">
+                  Home
+                </a>
+                <a href="#" className="text-zinc-400 hover:text-foreground">
+                  Blog
+                </a>
+                <a href="#" className="text-zinc-400 hover:text-foreground">
+                  Resume
+                </a>
+              </nav>
             </div>
             <div className="flex items-center gap-4">
               <CommandMenu />
