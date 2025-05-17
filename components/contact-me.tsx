@@ -1,3 +1,5 @@
+import { GradientText } from "./effects/GradientText";
+
 export default function ContactMe() {
   return (
     <section id="contact" className="py-8">
@@ -5,8 +7,8 @@ export default function ContactMe() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
           {/* Left side */}
           <div className="flex flex-col">
-            <h3 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
-              Let&apos;s get in touch
+            <h3 className="text-4xl font-bold mb-4">
+              <GradientText>Let&apos;s get in touch</GradientText>
             </h3>
             <p className="text-muted-foreground lg:text-lg">
               Have a question, new opportunity, or just want to have a quick chat? Feel free to send me a message.

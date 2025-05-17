@@ -8,9 +8,8 @@ import Header from "@/components/header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Bruce Wang | Personal Website",
+  title: "Bruce Wang",
   description: "Personal website of Bruce Wang",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

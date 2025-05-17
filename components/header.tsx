@@ -2,30 +2,39 @@
 
 import { MoonIcon, SunIcon } from "lucide-react"
 import { useTheme } from "next-themes"
+import Link from "next/link"
 import CommandMenu from "./command-menu"
+import { GradientText } from "./effects/GradientText"
 
 export default function Header() {
   const { theme, setTheme } = useTheme()
 
+  // Navigation links defined in a single array
+  const navigationLinks = [
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog" },
+    { name: "Resume", path: "/resume" }
+  ]
+
   return (
-    <header className="sticky top-0 z-10 w-full py-4 backdrop-blur-sm">
+    <header className="fixed top-0 z-10 w-full mt-6 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="max-w-screen-lg mx-auto rounded-lg border border-gray-700 px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-6">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
-                Bruce Wang
+              <h1 className="text-xl font-bold">
+                <GradientText>Bruce Wang</GradientText>
               </h1>
               <nav className="hidden md:flex space-x-4">
-                <a href="/" className="text-zinc-400 hover:text-foreground">
-                  Home
-                </a>
-                <a href="#" className="text-zinc-400 hover:text-foreground">
-                  Blog
-                </a>
-                <a href="#" className="text-zinc-400 hover:text-foreground">
-                  Resume
-                </a>
+                {navigationLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.path}
+                    className="text-zinc-400 hover:text-foreground"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </nav>
             </div>
             <div className="flex items-center gap-4">
