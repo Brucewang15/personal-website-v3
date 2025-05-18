@@ -168,7 +168,7 @@ export default function Experience() {
       </h2>
       <div className="space-y-6">
         {experiences.map((exp) => (
-          <div key={exp.id} className="relative rounded-lg border border-border bg-card p-6 transition-all hover:shadow-md">
+          <div key={exp.id} className="relative rounded-lg border border-border bg-card p-6 transition-all">
             {/* Glow Effect */}
             <GlowingEffect
               disabled={false}
