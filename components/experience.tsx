@@ -201,11 +201,11 @@ export default function Experience() {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <div>
                     <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                    <p className="text-lg font-medium text-foreground">{exp.company}</p>
+                    <p className="text-base font-medium text-foreground text-zinc-300">{exp.company}</p>
                   </div>
                   <div className="flex flex-col items-start md:items-end">
                     <p className="text-lg font-medium text-foreground">{exp.period}</p>
-                    <p className="text-lg font-medium text-foreground">{exp.location}</p>
+                    <p className="text-base font-medium text-foreground text-zinc-300">{exp.location}</p>
                   </div>
                 </div>
 
