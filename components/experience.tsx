@@ -26,7 +26,7 @@ const experiences: Experience[] = [
     description:
       "Training environments for browser agents",
     logo: Plato,
-    technologies: ["Node.js", "React", "TypeScript"],
+    technologies: ["Python", "AI Agents", "Docker", "AWS", "React"],
   },
   {
     id: "2",
@@ -37,7 +37,7 @@ const experiences: Experience[] = [
     description:
       "Event discovery app",
     logo: Hppn,
-    technologies: ["Next.js", "Tailwind CSS", "JavaScript"],
+    technologies: ["React Native", "TypeScript", "FastAPI", "PostgreSQL", "FAISS"],
   },
   {
     id: "3",
@@ -48,7 +48,7 @@ const experiences: Experience[] = [
     description:
       "Full-stack engineering",
     logo: TID,
-    technologies: ["JavaScript", "CI/CD", "Agile"],
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "MySQL"],
   },
   {
     id: "4",
@@ -59,7 +59,7 @@ const experiences: Experience[] = [
     description:
       "Currently studying computer science at the University of Waterloo",
     logo: Waterloo,
-    technologies: ["Machine Learning", "D3.js", "Research"],
+    technologies: ["Design Recipe", "Gambling", "Sleeping", "Eating"],
   },
 ]
 
@@ -87,6 +87,70 @@ const getTagColor = (tech: string) => {
       bg: "bg-purple-100 dark:bg-purple-900/20",
       text: "text-purple-800 dark:text-purple-300",
     }
+  } else if (
+    lowerTech.includes("python") ||
+    lowerTech.includes("flask") ||
+    lowerTech.includes("django") ||
+    lowerTech.includes("fastapi")
+  ) {
+    return {
+      bg: "bg-green-100 dark:bg-green-900/20",
+      text: "text-green-800 dark:text-green-300",
+    }
+  } else if (
+    lowerTech.includes("aws") ||
+    lowerTech.includes("docker") ||
+    lowerTech.includes("cloud") ||
+    lowerTech.includes("kubernetes") ||
+    lowerTech.includes("container")
+  ) {
+    return {
+      bg: "bg-pink-100 dark:bg-pink-900/20",
+      text: "text-pink-800 dark:text-pink-300",
+    }
+  } else if (
+    lowerTech.includes("sql") ||
+    lowerTech.includes("postgres") ||
+    lowerTech.includes("mysql") ||
+    lowerTech.includes("database") ||
+    lowerTech.includes("mongo")
+  ) {
+    return {
+      bg: "bg-teal-100 dark:bg-teal-900/20",
+      text: "text-teal-800 dark:text-teal-300",
+    }
+  } else if (
+    lowerTech.includes("typescript") ||
+    lowerTech.includes("javascript") ||
+    lowerTech.includes("js") ||
+    lowerTech.includes("ts")
+  ) {
+    return {
+      bg: "bg-orange-100 dark:bg-orange-900/20",
+      text: "text-orange-800 dark:text-orange-300",
+    }
+  } else if (
+    lowerTech.includes("ai") ||
+    lowerTech.includes("agent") ||
+    lowerTech.includes("ml") ||
+    lowerTech.includes("faiss") ||
+    lowerTech.includes("learning")
+  ) {
+    return {
+      bg: "bg-indigo-100 dark:bg-indigo-900/20",
+      text: "text-indigo-800 dark:text-indigo-300",
+    }
+  } else if (
+    lowerTech.includes("design") ||
+    lowerTech.includes("recipe") ||
+    lowerTech.includes("gambling") ||
+    lowerTech.includes("sleeping") ||
+    lowerTech.includes("eating")
+  ) {
+    return {
+      bg: "bg-amber-100 dark:bg-amber-900/20",
+      text: "text-amber-800 dark:text-amber-300",
+    }
   } else {
     return {
       bg: "bg-yellow-100 dark:bg-yellow-900/20",
@@ -95,11 +159,12 @@ const getTagColor = (tech: string) => {
   }
 }
 
+
 export default function Experience() {
   return (
     <section id="experience" className="py-8">
       <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-        <GradientText>Experience</GradientText> 
+        <GradientText>Experience</GradientText>
       </h2>
       <div className="space-y-6">
         {experiences.map((exp) => (
@@ -108,11 +173,14 @@ export default function Experience() {
               {/* Logo */}
               <div className="flex-shrink-0">
                 <div className="relative h-16 w-16 overflow-hidden rounded-lg">
+                  {exp.company === "Plato Technologies" ? (
+                    <div className="absolute inset-[15%] bg-white rounded-lg z-0"></div>
+                  ) : null}
                   <Image
                     src={exp.logo || "/placeholder.svg"}
                     alt={`${exp.company} logo`}
                     fill
-                    className="object-cover"
+                    className="object-cover relative z-10"
                   />
                 </div>
               </div>
