@@ -6,7 +6,7 @@ import Projects from "@/components/projects"
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 mt-24">
       <AboutMe />
       <Experience />
       <Projects />

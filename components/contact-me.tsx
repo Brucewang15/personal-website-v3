@@ -2,7 +2,7 @@ import { GradientText } from "./effects/GradientText";
 
 export default function ContactMe() {
   return (
-    <section id="contact" className="py-8">
+    <section id="contact" className="py-8 ">
       <div className="py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
           {/* Left side */}

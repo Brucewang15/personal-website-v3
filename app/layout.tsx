@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
+import { Spotlight } from "@/components/effects/Spotlight"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,9 +22,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="min-h-screen bg-background">
+          <div className="min-h-screen bg-background w-full overflow-x-hidden relative">
             <Header />
-            <main className="container mx-auto px-4 py-8 max-w-screen-lg">{children}</main>
+            <Spotlight />
+            <main className="mx-auto px-4 py-8 max-w-[1050px]">{children}</main>
           </div>
         </ThemeProvider>
       </body>

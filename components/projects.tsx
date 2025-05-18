@@ -1,12 +1,44 @@
+import { GradientBorder } from "./effects/GradientBorder"
+import { GradientText } from "./effects/GradientText"
+import ProjectCard from "./ProjectsCard"
+import Watclub from "@/public/watclub.png"
+import Tune2Keys from "@/public/Tune2keys.png"
+import SoccerMetrics from "@/public/soccermetric.png"
 export default function Projects() {
+
+
+  const projects = [
+    {
+      "id": "1",
+      "name": "WatClub - 🏆 UWCSC",
+      "description": "Club review website for UWaterloo students",
+      "link": "https://github.com/brucewang15/watclub",
+      "image": Watclub
+    },
+    {
+      "id": "2",
+      "name": "Tune2Keys - 🏆 HackWestern",
+      "description": "Audio to sheet music ML model",
+      "link": "https://github.com/jglu/tune2key",
+      "image": Tune2Keys
+    },
+    {
+      "id": "3",
+      "name": "SoccerMetrics - 🏆 GeeseHacks",
+      "description": "Soccer analytics and feedback app",
+      "link": "https://github.com/gordonzhang1/SoccerMetrics",
+      "image": SoccerMetrics
+    }
+  ]
   return (
     <section id="projects" className="py-8">
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="rounded-lg border p-6">
-        <p className="text-muted-foreground">
-          [Placeholder] Showcase your projects here. Include descriptions, technologies used, links to live demos or
-          repositories, and images of your work.
-        </p>
+      <h2 className="text-3xl lg:text-4xl font-bold mb-12">
+        <GradientText>Projects</GradientText> 
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </section>
   )
