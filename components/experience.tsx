@@ -180,7 +180,7 @@ export default function Experience() {
                     src={exp.logo || "/placeholder.svg"}
                     alt={`${exp.company} logo`}
                     fill
-                    className="object-cover relative z-10"
+                    className="object-cover relative z-5"
                   />
                 </div>
               </div>
