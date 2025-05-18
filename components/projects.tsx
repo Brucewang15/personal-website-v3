@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectsCard"
 import Watclub from "@/public/watclub.png"
 import Tune2Keys from "@/public/Tune2keys.png"
 import SoccerMetrics from "@/public/soccermetric.png"
+import TheraAI from "@/public/theraAI.png"
 export default function Projects() {
 
 
@@ -28,6 +29,13 @@ export default function Projects() {
       "description": "Soccer analytics and feedback app",
       "link": "https://github.com/gordonzhang1/SoccerMetrics",
       "image": SoccerMetrics
+    },
+    {
+      "id": "4",
+      "name": "TheraAI - UoftHacks",
+      "description": "AI-powered therapy app",
+      "link": "https://talktuahtherapist.co/",
+      "image": TheraAI
     }
   ]
   return (
