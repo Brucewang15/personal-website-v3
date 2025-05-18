@@ -1,9 +1,10 @@
-import Image, { StaticImageData } from "next/image"
-import { GradientText } from "./effects/GradientText"
-import Plato from "@/public/plato-no-bg.png"
 import Hppn from "@/public/hppn_logo.jpg"
+import Plato from "@/public/plato-no-bg.png"
 import TID from "@/public/topinfodev.png"
 import Waterloo from "@/public/waterloo_logo.png"
+import Image, { StaticImageData } from "next/image"
+import { GlowingEffect } from "./effects/GlowEffect"
+import { GradientText } from "./effects/GradientText"
 
 interface Experience {
   id: string
@@ -55,7 +56,7 @@ const experiences: Experience[] = [
     role: "Computer Science",
     company: "University of Waterloo",
     location: "Waterloo, ON",
-    period: "Sep 2024 - Present",
+    period: "Sept 2024 - Present",
     description:
       "Currently studying computer science at the University of Waterloo",
     logo: Waterloo,
@@ -159,7 +160,6 @@ const getTagColor = (tech: string) => {
   }
 }
 
-
 export default function Experience() {
   return (
     <section id="experience" className="py-8">
@@ -168,8 +168,19 @@ export default function Experience() {
       </h2>
       <div className="space-y-6">
         {experiences.map((exp) => (
-          <div key={exp.id} className="rounded-lg border border-border bg-card p-6 transition-all hover:shadow-md">
-            <div className="flex flex-col md:flex-row gap-6">
+          <div key={exp.id} className="relative rounded-lg border border-border bg-card p-6 transition-all hover:shadow-md">
+            {/* Glow Effect */}
+            <GlowingEffect
+              disabled={false}
+              glow={true}
+              borderWidth={1}
+              blur={0}
+              spread={81}
+              proximity={150}
+              className="z-0"
+            />
+
+            <div className="flex flex-col md:flex-row gap-6 relative z-5">
               {/* Logo */}
               <div className="flex-shrink-0">
                 <div className="relative h-16 w-16 overflow-hidden rounded-lg">

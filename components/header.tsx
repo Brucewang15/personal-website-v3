@@ -17,7 +17,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-0 z-10 w-full mt-6 backdrop-blur-sm">
+    <header className="fixed top-0 z-10 w-full mt-6 backdrop-blur-sm ">
       <div className="container mx-auto px-4">
         <div className="max-w-[1050px] mx-auto rounded-lg border bg-white/60 dark:bg-black/60 border-gray-700 px-4 py-3">
           <div className="flex items-center justify-between">
