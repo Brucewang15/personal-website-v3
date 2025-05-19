@@ -184,7 +184,7 @@ export default function Experience() {
               <div className="flex flex-col md:flex-row gap-6 relative z-5">
                 {/* Logo */}
                 <div className="flex-shrink-0">
-                  <div className="relative h-16 w-16 overflow-hidden rounded-lg">
+                  <div className="relative h-14 w-14 overflow-hidden rounded-lg">
                     {exp.company === "Plato Technologies" ? (
                       <div className="absolute inset-[15%] bg-white rounded-lg z-0"></div>
                     ) : null}
@@ -192,7 +192,7 @@ export default function Experience() {
                       src={exp.logo || "/placeholder.svg"}
                       alt={`${exp.company} logo`}
                       fill
-                      className="object-cover relative z-5"
+                      className="object-fit relative z-5"
                     />
                   </div>
                 </div>
@@ -202,11 +202,11 @@ export default function Experience() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                     <div>
                       <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                      <p className="text-base font-medium text-foreground text-zinc-300">{exp.company}</p>
+                      <p className="text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.company}</p>
                     </div>
                     <div className="flex flex-col items-start md:items-end">
                       <p className="text-lg font-medium text-foreground">{exp.period}</p>
-                      <p className="text-base font-medium text-foreground text-zinc-300">{exp.location}</p>
+                      <p className="text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.location}</p>
                     </div>
                   </div>
 

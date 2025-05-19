@@ -137,7 +137,7 @@ export default function AboutMe() {
     emissiveIntensity: 0.0,
     shininess: 0.3,
     autoRotate: true,
-    autoRotateSpeed: 0.25,
+    autoRotateSpeed: 0.1,
     initialPosition: {  // Set initial position to Waterloo
       lat: 43.4643,
       lng: -80.5204
@@ -153,7 +153,7 @@ export default function AboutMe() {
       endLat: 43.4643,
       endLng: -80.5204,
       arcAlt: 0,
-      color: "#00aaff" // Bright blue to highlight Waterloo
+      color: "#ffffff" // Bright blue to highlight Waterloo
     }
   ];
 
