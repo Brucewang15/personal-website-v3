@@ -1,8 +1,31 @@
+"use client"
+
 import Link from "next/link"
 import { Github, Linkedin, Instagram, Twitter } from "lucide-react"
 import { GradientText } from "./effects/GradientText"
 
 export default function Footer() {
+  const socialLinks = [
+    { href: "https://github.com/brucewang15", icon: <Github className="h-5 w-5" />, label: "GitHub" },
+    { href: "https://linkedin.com/in/brucewang15", icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn" },
+    { href: "https://www.instagram.com/bruce_w.15/", icon: <Instagram className="h-5 w-5" />, label: "Instagram" },
+    { href: "https://x.com/bruce_wang15", icon: <Twitter className="h-5 w-5" />, label: "X (Twitter)" }
+  ]
+
+  const navLinks = {
+    Landing: [
+      { href: "#about", text: "About Me" },
+      { href: "#experience", text: "Experience" },
+      { href: "#projects", text: "Projects" },
+      { href: "#contact", text: "Contact Me" }
+    ],
+    Pages: [
+      { href: "/", text: "Home" },
+      { href: "/blog", text: "Blog" },
+      { href: "/resume", text: "Resume" }
+    ]
+  }
+
   return (
     <footer className="border-t py-12 mt-16">
       <div className="container mx-auto px-4 max-w-screen-lg">
@@ -15,95 +38,46 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">b225wang@uwaterloo.ca</p>
 
             <div className="flex space-x-4 mt-4">
-              <Link
-                href="https://github.com/brucewang15"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://linkedin.com/in/brucewang15"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://www.instagram.com/bruce_w.15/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://x.com/bruce_wang15"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="X (Twitter)"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
+              {socialLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label={link.label}
+                >
+                  {link.icon}
+                </Link>
+              ))}
             </div>
           </div>
 
           {/* Right side */}
           <div className="grid grid-cols-2 gap-24 justify-end md:ml-auto">
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Landing</h3>
-              <ul className="space-y-2">
-                <li>
-                </li>
-                <li>
-                  <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Me
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#experience" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Experience
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Me
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Pages</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/resume" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Resume
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            {Object.entries(navLinks).map(([title, links]) => (
+              <div key={title} className="space-y-4">
+                <h3 className="text-sm font-semibold uppercase tracking-wider">{title}</h3>
+                <ul className="space-y-2">
+                  {links.map((link) => (
+                    <li key={link.href}>
+                      <Link 
+                        href={link.href} 
+                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={(e) => {
+                          if (link.href.startsWith('#') && window.location.pathname === '/') {
+                            e.preventDefault();
+                            document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
+                      >
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
