@@ -50,7 +50,7 @@ export const BentoGridItem = ({
                 <div className="">
                     <div className="flex items-center gap-2 mb-2">
                         {icon}
-                        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200">
+                        <div className="font-sans font-semibold ml-1 text-neutral-600 dark:text-neutral-200">
                             {title}
                         </div>
                     </div>

@@ -168,53 +168,54 @@ export default function Experience() {
       </h2>
       <div className="space-y-6">
         {experiences.map((exp) => (
-          <div key={exp.id} className="relative rounded-lg border border-border bg-card p-6 transition-all">
-            {/* Glow Effect */}
-            <GlowingEffect
-              disabled={false}
-              glow={true}
-              borderWidth={1}
-              blur={0}
-              spread={81}
-              proximity={120}
-              className="z-0"
-            />
+          <div className="relative rounded-lg p-[1px] transition-all bg-gradient-to-b from-neutral-200 to-neutral-400 dark:from-white/[0.15] dark:to-white/[0.025] shadow-input hover:shadow-xl">
+            <div key={exp.id} className="relative rounded-lg bg-card p-6 transition-all">
+              {/* Glow Effect */}
+              <GlowingEffect
+                disabled={false}
+                glow={true}
+                borderWidth={1}
+                blur={0}
+                spread={81}
+                proximity={120}
+                className="z-0"
+              />
 
-            <div className="flex flex-col md:flex-row gap-6 relative z-5">
-              {/* Logo */}
-              <div className="flex-shrink-0">
-                <div className="relative h-16 w-16 overflow-hidden rounded-lg">
-                  {exp.company === "Plato Technologies" ? (
-                    <div className="absolute inset-[15%] bg-white rounded-lg z-0"></div>
-                  ) : null}
-                  <Image
-                    src={exp.logo || "/placeholder.svg"}
-                    alt={`${exp.company} logo`}
-                    fill
-                    className="object-cover relative z-5"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-grow">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                    <p className="text-base font-medium text-foreground text-zinc-300">{exp.company}</p>
-                  </div>
-                  <div className="flex flex-col items-start md:items-end">
-                    <p className="text-lg font-medium text-foreground">{exp.period}</p>
-                    <p className="text-base font-medium text-foreground text-zinc-300">{exp.location}</p>
+              <div className="flex flex-col md:flex-row gap-6 relative z-5">
+                {/* Logo */}
+                <div className="flex-shrink-0">
+                  <div className="relative h-16 w-16 overflow-hidden rounded-lg">
+                    {exp.company === "Plato Technologies" ? (
+                      <div className="absolute inset-[15%] bg-white rounded-lg z-0"></div>
+                    ) : null}
+                    <Image
+                      src={exp.logo || "/placeholder.svg"}
+                      alt={`${exp.company} logo`}
+                      fill
+                      className="object-cover relative z-5"
+                    />
                   </div>
                 </div>
 
-                <div className="mt-3">
-                  <p className="text-muted-foreground">{exp.description}</p>
-                </div>
+                {/* Content */}
+                <div className="flex-grow">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
+                      <p className="text-base font-medium text-foreground text-zinc-300">{exp.company}</p>
+                    </div>
+                    <div className="flex flex-col items-start md:items-end">
+                      <p className="text-lg font-medium text-foreground">{exp.period}</p>
+                      <p className="text-base font-medium text-foreground text-zinc-300">{exp.location}</p>
+                    </div>
+                  </div>
 
-                {/* Technologies used */}
-                {/* <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="mt-3">
+                    <p className="text-muted-foreground">{exp.description}</p>
+                  </div>
+
+                  {/* Technologies used */}
+                  {/* <div className="mt-4 flex flex-wrap gap-2">
                   {exp.technologies.map((tech, index) => {
                     const colorClass = getTagColor(tech)
                     return (
@@ -227,6 +228,7 @@ export default function Experience() {
                     )
                   })}
                 </div> */}
+                </div>
               </div>
             </div>
           </div>

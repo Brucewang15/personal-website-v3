@@ -1,5 +1,5 @@
-import { CodeIcon, UserIcon } from "lucide-react";
-import { FaHeartbeat, FaLink, FaMusic, FaSkiing, FaTable } from "react-icons/fa";
+import { CodeIcon } from "lucide-react";
+import { FaHeartbeat, FaLink, FaLocationArrow, FaMusic, FaSkiing, FaTable } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
 import {
   SiAmazonwebservices,
@@ -38,6 +38,7 @@ import {
 import { BentoGrid, BentoGridItem } from "./effects/BentoGrid";
 import { GradientText } from "./effects/GradientText";
 import { InfiniteMovingCards } from "./effects/InfiniteCards";
+import { World } from "./effects/globe";
 
 export default function AboutMe() {
   // Define skills for the infinite cards
@@ -79,27 +80,27 @@ export default function AboutMe() {
     {
       name: "GitHub",
       icon: <SiGithub className="h-4 w-4" />,
-      url: "https://github.com/yourusername"
+      url: "https://github.com/brucewang15"
     },
     {
       name: "LinkedIn",
       icon: <SiLinkedin className="h-4 w-4" />,
-      url: "https://linkedin.com/in/yourusername"
+      url: "https://linkedin.com/in/brucewang15"
     },
     {
       name: "Instagram",
       icon: <SiInstagram className="h-4 w-4" />,
-      url: "https://instagram.com/yourusername"
+      url: "https://www.instagram.com/bruce_w.15"
     },
     {
       name: "Twitter",
       icon: <SiX className="h-4 w-4" />,
-      url: "https://twitter.com/yourusername"
+      url: "https://twitter.com/bruce_wang15"
     },
     {
       name: "YouTube",
       icon: <SiYoutube className="h-4 w-4" />,
-      url: "https://youtube.com/@yourusername"
+      url: "https://youtube.com/@ihaspros"
     },
   ]
 
@@ -122,6 +123,33 @@ export default function AboutMe() {
     },
   ]
 
+  // Globe configuration for Waterloo highlight
+  const globeConfig = {
+    globeColor: "#050505",
+    pointLight: "#ffffff",
+    ambientLight: "#ffffff",
+    directionalLeftLight: "#ffffff",
+    directionalTopLight: "#ffffff",
+    showAtmosphere: true,
+    atmosphereColor: "#ffffff",
+    atmosphereAltitude: 0.1,
+    autoRotate: true,
+    autoRotateSpeed: 0.25
+  };
+
+  // Data for the globe - highlight Waterloo, ON
+  const globeData = [
+    {
+      order: 1,
+      startLat: 43.4643,  // Waterloo, ON coordinates
+      startLng: -80.5204,
+      endLat: 43.4643,
+      endLng: -80.5204,
+      arcAlt: 0,
+      color: "#00aaff" // Bright blue to highlight Waterloo
+    }
+  ];
+
   return (
     <section id="about" className="py-8">
       <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -132,9 +160,17 @@ export default function AboutMe() {
         {/* Top row: Equal-sized items (3:3) */}
         <BentoGridItem
           className="col-span-1 md:col-span-3"
-          title="Who I Am"
-          description="I'm a software engineer and computer science student with a passion for building intuitive, user-friendly applications. Currently studying at the University of Waterloo, I combine academic learning with real-world experience to create innovative solutions."
-          icon={<UserIcon className="h-6 w-6 text-blue-500" />}
+          title="Waterloo, ON"
+          description={
+            <div className="flex flex-col h-full">
+              <div className="flex-1 flex items-center justify-center">
+                <div className="h-60 w-60">
+                  <World globeConfig={globeConfig} data={globeData} />
+                </div>
+              </div>
+            </div>
+          }
+          icon={<FaLocationArrow className="h-4 w-4" />}
         />
 
         <BentoGridItem
