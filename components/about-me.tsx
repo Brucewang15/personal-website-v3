@@ -1,5 +1,5 @@
 import { CodeIcon } from "lucide-react";
-import { FaHeartbeat, FaLink, FaLocationArrow, FaMusic, FaSkiing, FaTable } from "react-icons/fa";
+import { FaHeartbeat, FaLink, FaLocationArrow, FaMusic, FaSkiing, FaTable, FaTableTennis } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
 import {
   SiAmazonwebservices,
@@ -39,6 +39,8 @@ import { BentoGrid, BentoGridItem } from "./effects/BentoGrid";
 import { GradientText } from "./effects/GradientText";
 import { InfiniteMovingCards } from "./effects/InfiniteCards";
 import { World } from "./effects/globe";
+import Icon from '@mdi/react';
+import { mdiBadminton } from '@mdi/js';
 
 export default function AboutMe() {
   // Define skills for the infinite cards
@@ -111,7 +113,7 @@ export default function AboutMe() {
     },
     {
       name: "Badminton",
-      icon: <GiJumpingDog className="h-4 w-4" />,
+      icon: <Icon path={mdiBadminton} size={0.66} />,
     },
     {
       name: "Piano",
@@ -119,7 +121,7 @@ export default function AboutMe() {
     },
     {
       name: "Ping Pong",
-      icon: <FaTable className="h-4 w-4" />,
+      icon: <FaTableTennis className="h-4 w-4" />,
     },
   ]
 
@@ -153,7 +155,7 @@ export default function AboutMe() {
       endLat: 43.4643,
       endLng: -80.5204,
       arcAlt: 0,
-      color: "#ffffff" // Bright blue to highlight Waterloo
+      color: "#ffffff" 
     }
   ];
 
