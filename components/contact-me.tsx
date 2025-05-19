@@ -1,3 +1,4 @@
+import { GradientBorder } from "./effects/GradientBorder";
 import { GradientText } from "./effects/GradientText";
 
 export default function ContactMe() {
@@ -57,15 +58,14 @@ export default function ContactMe() {
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-              >
-                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#C5DCFF_0%,#2563EB_50%,#C5DCFF_100%)]" />
-                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-slate-950 px-6 py-3 text-sm font-medium backdrop-blur-3xl">
+              <GradientBorder className="">
+                <button
+                  type="submit"
+                  className="flex justify-center items-center relative px-6 py-3 font-semibold overflow-hidden"
+                >
                   Submit
-                </span>
-              </button>
+                </button>
+              </GradientBorder>
             </form>
           </div>
         </div>
