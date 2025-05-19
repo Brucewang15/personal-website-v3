@@ -176,7 +176,7 @@ export default function Experience() {
               borderWidth={1}
               blur={0}
               spread={81}
-              proximity={150}
+              proximity={120}
               className="z-0"
             />
 
@@ -214,7 +214,7 @@ export default function Experience() {
                 </div>
 
                 {/* Technologies used */}
-                <div className="mt-4 flex flex-wrap gap-2">
+                {/* <div className="mt-4 flex flex-wrap gap-2">
                   {exp.technologies.map((tech, index) => {
                     const colorClass = getTagColor(tech)
                     return (
@@ -226,7 +226,7 @@ export default function Experience() {
                       </span>
                     )
                   })}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
