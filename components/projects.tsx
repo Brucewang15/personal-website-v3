@@ -43,7 +43,7 @@ export default function Projects() {
       <h2 className="text-3xl lg:text-4xl font-bold mb-12">
         <GradientText>Projects</GradientText> 
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

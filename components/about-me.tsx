@@ -125,16 +125,23 @@ export default function AboutMe() {
 
   // Globe configuration for Waterloo highlight
   const globeConfig = {
-    globeColor: "#050505",
-    pointLight: "#ffffff",
-    ambientLight: "#ffffff",
+    globeColor: "#121212", // Almost black
+    pointLight: "#ffffff", // Changed to pure white
+    ambientLight: "#ffffff", // Changed to pure white
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
     showAtmosphere: true,
-    atmosphereColor: "#ffffff",
-    atmosphereAltitude: 0.1,
+    atmosphereColor: "#FFFFFF", // Pure white atmosphere
+    atmosphereAltitude: 0.1, // Slightly increased for more glow
+    emissive: "#000000",
+    emissiveIntensity: 0.0,
+    shininess: 0.3,
     autoRotate: true,
-    autoRotateSpeed: 0.25
+    autoRotateSpeed: 0.25,
+    initialPosition: {  // Set initial position to Waterloo
+      lat: 43.4643,
+      lng: -80.5204
+    }
   };
 
   // Data for the globe - highlight Waterloo, ON
@@ -159,12 +166,13 @@ export default function AboutMe() {
       <BentoGrid className="grid-cols-1 md:grid-cols-6 gap-4">
         {/* Top row: Equal-sized items (3:3) */}
         <BentoGridItem
-          className="col-span-1 md:col-span-3"
+          className="col-span-1 md:col-span-3 overflow-hidden"
+          height="h-[18rem]"
           title="Waterloo, ON"
           description={
             <div className="flex flex-col h-full">
               <div className="flex-1 flex items-center justify-center">
-                <div className="h-60 w-60">
+                <div className="h-[28rem] w-[28rem] -translate-y-19.5">
                   <World globeConfig={globeConfig} data={globeData} />
                 </div>
               </div>
@@ -175,6 +183,7 @@ export default function AboutMe() {
 
         <BentoGridItem
           className="col-span-1 md:col-span-3"
+          height="md:h-[18rem]"
           title="Connect With Me"
           description={
             <div className="flex flex-col justify-between h-full gap-4 mt-6 ml-2 text-zinc-600 dark:text-zinc-400">
