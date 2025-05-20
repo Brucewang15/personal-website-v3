@@ -1,3 +1,5 @@
+'use client'
+
 import Hppn from "@/public/hppn_logo.jpg"
 import Plato from "@/public/plato-no-bg.png"
 import TID from "@/public/topinfodev.png"
@@ -163,12 +165,12 @@ const getTagColor = (tech: string) => {
 export default function Experience() {
   return (
     <section id="experience" className="py-8">
-      <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
         <GradientText>Experience</GradientText>
       </h2>
       <div className="space-y-6">
-        {experiences.map((exp) => (
-          <div className="relative rounded-lg p-[1px] transition-all bg-gradient-to-b from-neutral-200 to-neutral-400 dark:from-white/[0.15] dark:to-white/[0.025] shadow-input hover:shadow-xl">
+        {experiences.map((exp, index) => (
+          <div key={index} className="relative rounded-lg p-[1px] transition-all bg-gradient-to-b from-neutral-200 to-neutral-400 dark:from-white/[0.15] dark:to-white/[0.025] shadow-input hover:shadow-xl">
             <div key={exp.id} className="relative rounded-lg bg-card p-6 transition-all">
               {/* Glow Effect */}
               <GlowingEffect

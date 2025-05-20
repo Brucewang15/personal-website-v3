@@ -1,6 +1,6 @@
+'use client'
 import { CodeIcon } from "lucide-react";
-import { FaHeartbeat, FaLink, FaLocationArrow, FaMusic, FaSkiing, FaTable, FaTableTennis } from "react-icons/fa";
-import { GiJumpingDog } from "react-icons/gi";
+import { FaHeartbeat, FaLink, FaLocationArrow, FaMusic, FaSkiing, FaTableTennis } from "react-icons/fa";
 import {
   SiAmazonwebservices,
   SiCplusplus,
@@ -37,8 +37,9 @@ import {
 } from "react-icons/si";
 import { BentoGrid, BentoGridItem } from "./effects/BentoGrid";
 import { GradientText } from "./effects/GradientText";
-import { InfiniteMovingCards } from "./effects/InfiniteCards";
-import { World } from "./effects/globe";
+import dynamic from "next/dynamic";
+const World = dynamic(() => import("./effects/globe").then((mod) => mod.World), { ssr: false });
+const InfiniteMovingCards = dynamic(() => import("./effects/InfiniteCards").then((mod) => mod.InfiniteMovingCards), { ssr: false });
 import Icon from '@mdi/react';
 import { mdiBadminton } from '@mdi/js';
 
@@ -161,7 +162,7 @@ export default function AboutMe() {
 
   return (
     <section id="about" className="py-8">
-      <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
         <GradientText>About Me</GradientText>
       </h2>
 

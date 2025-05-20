@@ -1,3 +1,4 @@
+'use client'
 import { GradientBorder } from "./effects/GradientBorder"
 import { GradientText } from "./effects/GradientText"
 import ProjectCard from "./ProjectsCard"
@@ -40,7 +41,7 @@ export default function Projects() {
   ]
   return (
     <section id="projects" className="py-8">
-      <h2 className="text-3xl lg:text-4xl font-bold mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
         <GradientText>Projects</GradientText> 
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

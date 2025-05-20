@@ -64,12 +64,6 @@ export default function Footer() {
                       <Link 
                         href={link.href} 
                         className="text-muted-foreground hover:text-foreground transition-colors"
-                        onClick={(e) => {
-                          if (link.href.startsWith('#') && window.location.pathname === '/') {
-                            e.preventDefault();
-                            document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
-                          }
-                        }}
                       >
                         {link.text}
                       </Link>

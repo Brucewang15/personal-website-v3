@@ -1,7 +1,29 @@
+"use client";
+
 import { GradientBorder } from "./effects/GradientBorder";
 import { GradientText } from "./effects/GradientText";
 
 export default function ContactMe() {
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    console.log("Form submitted");
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    }
+    console.log(data);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const resData = await response.json();
+    console.log(resData);
+  };
+
   return (
     <section id="contact" className="py-8 ">
       <div className="py-6">
@@ -18,7 +40,7 @@ export default function ContactMe() {
 
           {/* Right side */}
           <div>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-1">
                 </label>

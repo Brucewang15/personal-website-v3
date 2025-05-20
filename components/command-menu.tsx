@@ -10,7 +10,7 @@ export default function CommandMenu() {
   const [search, setSearch] = useState("")
   const [page, setPage] = useState("root")
 
-  // Use the built-in hook for handling keyboard shortcuts
+
   useHandleOpenCommandPalette(setOpen)
 
   const filteredItems = filterItems(
