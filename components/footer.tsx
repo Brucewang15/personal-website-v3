@@ -80,12 +80,12 @@ export default function Footer() {
 
           <div className="mt-4 md:mt-0 flex items-center gap-2">
             <a
-              href="https://cs.uwatering.com/#your-site-here?nav=prev"
+              href="https://cs.uwatering.com/https://brucewang15.vercel.app?nav=prev"
               className="text-muted-foreground hover:text-foreground"
             >
               ←
             </a>
-            <a href="https://cs.uwatering.com/#your-site-here" target="_blank" rel="noopener noreferrer">
+            <a href="https://cs.uwatering.com/https://brucewang15.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img
                 src="https://cs.uwatering.com/icon.black.svg"
                 alt="CS Webring"
@@ -93,7 +93,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://cs.uwatering.com/#your-site-here?nav=next"
+              href="https://cs.uwatering.com/https://brucewang15.vercel.app?nav=next"
               className="text-muted-foreground hover:text-foreground"
             >
               →
