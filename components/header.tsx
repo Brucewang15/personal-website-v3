@@ -29,7 +29,10 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-6">
               <Link href="/" className="text-xl font-bold">
-                <GradientText>Bruce Wang</GradientText>
+                <GradientText>
+                  <span className="hidden sm:inline">Bruce Wang</span>
+                  <span className="sm:hidden">BW</span>
+                </GradientText>
               </Link>
               <nav className="hidden md:flex space-x-6">
                 {navigationLinks.map((link, index) => (

@@ -1,24 +1,25 @@
 "use client"
 
+import { ChevronRight, MailIcon } from "lucide-react"
 import Link from "next/link"
 import { GradientBorder } from "./effects/GradientBorder"
 import { GradientText } from "./effects/GradientText"
-import { ChevronRight, MailIcon } from "lucide-react"
 
 export default function Hero() {
     return (
         <section className="flex flex-col items-center justify-start text-center px-4 pt-8">
-            <div className="space-y-6 max-w-4xl">
-                <h1 className="text-4xl md:text-5xl font-semibold">
+            <div className="max-w-4xl">
+                <h1 className="text-3xl md:text-5xl font-semibold mb-2 md:mb-4">
                     I'm Bruce Wang
                 </h1>
 
-                <h2 className="text-3xl md:text-4xl font-bold">
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
                     And I'm a <GradientText>Software Engineer</GradientText>
                 </h2>
 
-                <p className="text-base md:text-lg max-w-2xl mx-auto my-8">
-                    Hi! I'm Bruce Wang, a Computer Science student at the University of Waterloo.
+                <p className="text-sm md:text-lg max-w-2xl mx-auto">
+                    Hi! I'm Bruce Wang, a Computer Science student at UWaterloo and software engineer at Plato.
+                    Feel free to explore my website!
                 </p>
 
                 <div className="flex flex-wrap gap-4 justify-center mt-8">

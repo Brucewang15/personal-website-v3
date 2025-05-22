@@ -1,7 +1,7 @@
 "use client"
 
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
-import { Github, Linkedin, Instagram, Twitter } from "lucide-react"
 import { GradientText } from "./effects/GradientText"
 
 export default function Footer() {
@@ -25,6 +25,22 @@ export default function Footer() {
       { href: "/resume", text: "Resume" }
     ]
   }
+
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        // Get header height and add extra padding
+        const headerHeight = document.querySelector('header')?.offsetHeight || 100;
+        const yOffset = -headerHeight - 15; // Extra 20px for padding
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <footer className="border-t py-12 mt-16">
@@ -61,9 +77,10 @@ export default function Footer() {
                 <ul className="space-y-2">
                   {links.map((link) => (
                     <li key={link.href}>
-                      <Link 
-                        href={link.href} 
+                      <Link
+                        href={link.href}
                         className="text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={(e) => handleSectionClick(e, link.href)}
                       >
                         {link.text}
                       </Link>

@@ -27,7 +27,7 @@ const experiences: Experience[] = [
     location: "San Francisco, CA",
     period: "May 2025 - Aug 2025",
     description:
-      "Training environments for browser agents",
+      "🤖 Training environments for browser agents",
     logo: Plato,
     technologies: ["Python", "AI Agents", "Docker", "AWS", "React"],
   },
@@ -38,7 +38,7 @@ const experiences: Experience[] = [
     location: "Waterloo, ON",
     period: "Sept 2024 - Jan 2025",
     description:
-      "Event discovery app",
+      "🎉 Event discovery app",
     logo: Hppn,
     technologies: ["React Native", "TypeScript", "FastAPI", "PostgreSQL", "FAISS"],
   },
@@ -49,7 +49,7 @@ const experiences: Experience[] = [
     location: "Vancouver, BC",
     period: "May 2024 - Aug 2024",
     description:
-      "Full-stack engineering",
+      "💻 Full-stack engineering",
     logo: TID,
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "MySQL"],
   },
@@ -60,7 +60,7 @@ const experiences: Experience[] = [
     location: "Waterloo, ON",
     period: "Sept 2024 - Present",
     description:
-      "Currently studying computer science at the University of Waterloo",
+      "🎓 Currently studying computer science at the University of Waterloo",
     logo: Waterloo,
     technologies: ["Design Recipe", "Gambling", "Sleeping", "Eating"],
   },
@@ -183,9 +183,32 @@ export default function Experience() {
                 className="z-0"
               />
 
-              <div className="flex flex-col md:flex-row gap-6 relative z-5">
-                {/* Logo */}
-                <div className="flex-shrink-0">
+              <div className="flex flex-col md:flex-row md:gap-6 relative z-5">
+                {/* Content for mobile - Logo on right side */}
+                <div className="flex md:hidden justify-between items-center mb-3">
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">{exp.role}</h3>
+                    <p className="text-sm font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.company}</p>
+                  </div>
+
+                  {/* Logo */}
+                  <div className="flex-shrink-0">
+                    <div className="relative h-12 w-12 overflow-hidden rounded-lg">
+                      {exp.company === "Plato Technologies" ? (
+                        <div className="absolute inset-[15%] bg-white rounded-lg z-0"></div>
+                      ) : null}
+                      <Image
+                        src={exp.logo || "/placeholder.svg"}
+                        alt={`${exp.company} logo`}
+                        fill
+                        className="object-fit relative z-5"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop layout */}
+                <div className="hidden md:block flex-shrink-0">
                   <div className="relative h-14 w-14 overflow-hidden rounded-lg">
                     {exp.company === "Plato Technologies" ? (
                       <div className="absolute inset-[15%] bg-white rounded-lg z-0"></div>
@@ -201,35 +224,36 @@ export default function Experience() {
 
                 {/* Content */}
                 <div className="flex-grow">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                  {/* Desktop layout for title/company/date */}
+                  <div className="hidden md:flex md:flex-row md:items-center md:justify-between gap-2">
                     <div>
-                      <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                      <p className="text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.company}</p>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground">{exp.role}</h3>
+                      <p className="text-sm md:text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.company}</p>
                     </div>
-                    <div className="flex flex-col items-start md:items-end">
-                      <p className="text-lg font-medium text-foreground">{exp.period}</p>
-                      <p className="text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.location}</p>
+                    <div className="flex flex-col items-end">
+                      <p className="text-sm md:text-lg font-medium text-foreground">{exp.period}</p>
+                      <p className="text-xs md:text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.location}</p>
                     </div>
                   </div>
 
                   <div className="mt-3">
-                    <p className="text-muted-foreground">{exp.description}</p>
+                    <p className="text-sm md:text-base text-muted-foreground">{exp.description}</p>
                   </div>
 
                   {/* Technologies used */}
                   {/* <div className="mt-4 flex flex-wrap gap-2">
-                  {exp.technologies.map((tech, index) => {
-                    const colorClass = getTagColor(tech)
-                    return (
-                      <span
-                        key={index}
-                        className={`inline-flex items-center rounded-full ${colorClass.bg} px-2.5 py-0.5 text-xs font-medium ${colorClass.text}`}
-                      >
-                        {tech}
-                      </span>
-                    )
-                  })}
-                </div> */}
+                    {exp.technologies.map((tech, index) => {
+                      const colorClass = getTagColor(tech)
+                      return (
+                        <span
+                          key={index}
+                          className={`inline-flex items-center rounded-full ${colorClass.bg} px-2 py-0.5 text-xs md:text-sm font-medium ${colorClass.text}`}
+                        >
+                          {tech}
+                        </span>
+                      )
+                    })}
+                  </div> */}
                 </div>
               </div>
             </div>
