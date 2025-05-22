@@ -9,11 +9,11 @@ export default function Hero() {
     return (
         <section className="flex flex-col items-center justify-start text-center px-4 pt-8">
             <div className="max-w-4xl">
-                <h1 className="text-3xl md:text-5xl font-semibold mb-2 md:mb-4">
+                <h1 className="text-4xl md:text-5xl font-semibold mb-2 md:mb-4">
                     I'm Bruce Wang
                 </h1>
 
-                <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
                     And I'm a <GradientText>Software Engineer</GradientText>
                 </h2>
 

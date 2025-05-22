@@ -32,9 +32,8 @@ export default function Footer() {
       const targetId = href.replace('#', '');
       const element = document.getElementById(targetId);
       if (element) {
-        // Get header height and add extra padding
         const headerHeight = document.querySelector('header')?.offsetHeight || 100;
-        const yOffset = -headerHeight - 15; // Extra 20px for padding
+        const yOffset = -headerHeight - 15;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         window.scrollTo({ top: y, behavior: 'smooth' });
