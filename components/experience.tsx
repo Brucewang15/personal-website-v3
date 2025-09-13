@@ -26,9 +26,9 @@ const experiences: Experience[] = [
     role: "Member of Technical Staff Intern",
     company: "Mercor",
     location: "San Francisco, CA",
-    period: "Sept 2025 - Dec 2025",
+    period: "Sept 2025 - Present",
     description:
-      "RL environments and infrastructure for AI agents",
+      "🚀 RL environments and infrastructure for AI agents",
     logo: Mercor,
     technologies: ["Python", "Modal", "Docker", "AWS", "React"],
   },
