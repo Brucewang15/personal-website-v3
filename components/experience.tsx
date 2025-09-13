@@ -2,6 +2,7 @@
 
 import Hppn from "@/public/hppn_logo.jpg"
 import Plato from "@/public/plato-no-bg.png"
+import Mercor from "@/public/mercor.jpeg"
 import TID from "@/public/topinfodev.png"
 import Waterloo from "@/public/waterloo_logo.png"
 import Image, { StaticImageData } from "next/image"
@@ -22,6 +23,17 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: "1",
+    role: "Member of Technical Staff Intern",
+    company: "Mercor",
+    location: "San Francisco, CA",
+    period: "Sept 2025 - Dec 2025",
+    description:
+      "RL environments and infrastructure for AI agents",
+    logo: Mercor,
+    technologies: ["Python", "Modal", "Docker", "AWS", "React"],
+  },
+  {
+    id: "2",
     role: "Software Engineer Intern",
     company: "Plato Technologies",
     location: "San Francisco, CA",
@@ -32,7 +44,7 @@ const experiences: Experience[] = [
     technologies: ["Python", "AI Agents", "Docker", "AWS", "React"],
   },
   {
-    id: "2",
+    id: "3",
     role: "Software Engineer Intern",
     company: "Hppn.ing",
     location: "Waterloo, ON",
@@ -43,7 +55,7 @@ const experiences: Experience[] = [
     technologies: ["React Native", "TypeScript", "FastAPI", "PostgreSQL", "FAISS"],
   },
   {
-    id: "3",
+    id: "4",
     role: "Full-Stack Engineer Intern",
     company: "TopInfoDev Solutions",
     location: "Vancouver, BC",
@@ -54,7 +66,7 @@ const experiences: Experience[] = [
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "MySQL"],
   },
   {
-    id: "4",
+    id: "5",
     role: "Computer Science",
     company: "University of Waterloo",
     location: "Waterloo, ON",
