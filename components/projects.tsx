@@ -11,35 +11,35 @@ export default function Projects() {
 
   const projects = [
     {
-      "id": "0",
+      "id": "1",
       "name": "Pianofi - ⚡ WAT.AI",
       "description": "AI powered piano transcription",
       "link": "https://github.com/jogong2718/pianofi",
       "image": Pianofi
     },
     {
-      "id": "1",
+      "id": "2",
       "name": "WatClub - 🏆 UWCSC",
       "description": "Club review website for UWaterloo students",
       "link": "https://github.com/brucewang15/watclub",
       "image": Watclub
     },
     {
-      "id": "2",
+      "id": "3",
       "name": "Tune2Keys - 🏆 HackWestern",
       "description": "Audio to sheet music ML model",
       "link": "https://github.com/jglu/tune2key",
       "image": Tune2Keys
     },
     {
-      "id": "3",
+      "id": "4",
       "name": "SoccerMetrics - 🏆 GeeseHacks",
       "description": "Soccer analytics and feedback app",
       "link": "https://github.com/gordonzhang1/SoccerMetrics",
       "image": SoccerMetrics
     },
     {
-      "id": "4",
+      "id": "5",
       "name": "TheraAI - UoftHacks",
       "description": "AI-powered therapy app",
       "link": "https://talktuahtherapist.co/",
