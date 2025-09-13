@@ -1,15 +1,22 @@
 'use client'
-import { GradientBorder } from "./effects/GradientBorder"
 import { GradientText } from "./effects/GradientText"
 import ProjectCard from "./ProjectsCard"
 import Watclub from "@/public/watclub.png"
 import Tune2Keys from "@/public/Tune2keys.png"
 import SoccerMetrics from "@/public/soccermetric.png"
 import TheraAI from "@/public/theraAI.png"
+import Pianofi from "@/public/pianofi.png"
 export default function Projects() {
 
 
   const projects = [
+    {
+      "id": "0",
+      "name": "Pianofi - ⚡ WAT.AI",
+      "description": "AI powered piano transcription",
+      "link": "https://github.com/jogong2718/pianofi",
+      "image": Pianofi
+    },
     {
       "id": "1",
       "name": "WatClub - 🏆 UWCSC",
