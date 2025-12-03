@@ -8,7 +8,7 @@ export default function Footer() {
   const socialLinks = [
     { href: "https://github.com/brucewang15", icon: <Github className="h-5 w-5" />, label: "GitHub" },
     { href: "https://linkedin.com/in/brucewang15", icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn" },
-    { href: "https://www.instagram.com/bruce_w.15/", icon: <Instagram className="h-5 w-5" />, label: "Instagram" },
+    { href: "https://www.instagram.com/bruce.wang15/", icon: <Instagram className="h-5 w-5" />, label: "Instagram" },
     { href: "https://x.com/bruce_wang15", icon: <Twitter className="h-5 w-5" />, label: "X (Twitter)" }
   ]
 
