@@ -93,7 +93,7 @@ export default function AboutMe() {
     {
       name: "Instagram",
       icon: <SiInstagram className="h-4 w-4" />,
-      url: "https://www.instagram.com/bruce_w.15"
+      url: "https://www.instagram.com/bruce.wang15"
     },
     {
       name: "Twitter",
