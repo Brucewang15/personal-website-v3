@@ -177,7 +177,7 @@ const getTagColor = (tech: string) => {
 export default function Experience() {
   return (
     <section id="experience" className="py-8">
-      <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
+      <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-left">
         <GradientText>Experience</GradientText>
       </h2>
       <div className="space-y-6">
@@ -199,8 +199,8 @@ export default function Experience() {
                 {/* Content for mobile - Logo on right side */}
                 <div className="flex md:hidden justify-between items-center mb-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">{exp.role}</h3>
-                    <p className="text-sm font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.company}</p>
+                    <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
+                    <p className="text-xs font-medium text-foreground">{exp.company}</p>
                   </div>
 
                   {/* Logo */}
@@ -239,17 +239,17 @@ export default function Experience() {
                   {/* Desktop layout for title/company/date */}
                   <div className="hidden md:flex md:flex-row md:items-center md:justify-between gap-2">
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground">{exp.role}</h3>
-                      <p className="text-sm md:text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.company}</p>
+                      <h3 className="text-base md:text-lg font-semibold text-foreground">{exp.role}</h3>
+                      <p className="text-xs md:text-sm font-medium text-foreground">{exp.company}</p>
                     </div>
                     <div className="flex flex-col items-end">
-                      <p className="text-sm md:text-lg font-medium text-foreground">{exp.period}</p>
-                      <p className="text-xs md:text-base font-medium text-foreground text-zinc-700 dark:text-zinc-300">{exp.location}</p>
+                      <p className="text-xs md:text-base font-medium text-foreground">{exp.period}</p>
+                      <p className="text-xs md:text-sm font-medium text-foreground">{exp.location}</p>
                     </div>
                   </div>
 
                   <div className="mt-3">
-                    <p className="text-sm md:text-base text-muted-foreground">{exp.description}</p>
+                    <p className="text-xs md:text-sm text-foreground">{exp.description}</p>
                   </div>
 
                   {/* Technologies used */}

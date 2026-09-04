@@ -1,21 +1,18 @@
 "use client";
 
-import AboutMe from "@/components/about-me";
-import ContactMe from "@/components/contact-me";
-import Experience from "@/components/experience";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
-import Projects from "@/components/projects";
+import LocationBox from "@/components/location-box";
+import PageSections from "@/components/page-sections";
+import Recently from "@/components/recently";
 
 export default function Home() {
   return (
-    <div className="space-y-12 mt-24">
+    <PageSections>
       <Hero />
-      <AboutMe />
-      <Experience />
-      <Projects />
-      <ContactMe />
+      <Recently />
+      <LocationBox />
       <Footer />
-    </div>
+    </PageSections>
   )
 }

@@ -43,8 +43,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 </div>
 
                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-1">{project.name}</h3>
-                    <p className="text-sm lg:text-base text-gray-200 line-clamp-2">{project.description}</p>
+                    <h3 className="text-lg lg:text-xl font-bold text-white mb-1">{project.name}</h3>
+                    <p className="text-xs lg:text-sm text-gray-200 line-clamp-2">{project.description}</p>
                 </div>
 
                 {/* <div className="absolute inset-0 pointer-events-none">

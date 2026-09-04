@@ -1,7 +1,6 @@
 "use client"
 
 import SectionHeading from "./effects/section-heading"
-import LocationBox from "./location-box"
 
 const recentlyItems = [
   "Playing table tennis",
@@ -9,9 +8,9 @@ const recentlyItems = [
   "Diving into sandboxes",
 ]
 
-export default function AboutMe() {
+export default function Recently() {
   return (
-    <section id="about" className="space-y-8">
+    <section id="recently">
       <SectionHeading title="Recently" variant="recently">
         <ul className="space-y-2.5 text-xs md:text-base text-black dark:text-white">
           {recentlyItems.map((item) => (
@@ -25,8 +24,6 @@ export default function AboutMe() {
           ))}
         </ul>
       </SectionHeading>
-
-      <LocationBox />
     </section>
   )
 }
