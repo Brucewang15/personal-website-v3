@@ -47,11 +47,13 @@ export default function Projects() {
     }
   ]
   return (
-    <section id="projects" className="space-y-6 mt-8">
-      <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-left">
-        <GradientText>Projects</GradientText>
-      </h2>
-      <p className="text-base text-foreground mt-4 mb-12">Some things I&apos;ve built</p>
+    <section id="projects" className="mt-8">
+      <div className="space-y-6 mb-10">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-left">
+          <GradientText>Projects</GradientText>
+        </h2>
+        <p className="text-base text-foreground">Some things I&apos;ve built</p>
+      </div>
       <div className="grid grid-cols-1 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
