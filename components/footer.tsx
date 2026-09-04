@@ -20,18 +20,20 @@ export default function Footer() {
               key={link.label}
               href={link.href}
               {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="hover:opacity-80 transition-opacity"
             >
-              [ {link.label} ]
+              <span className="bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent grayscale transition-all duration-200 hover:grayscale-0">
+                [ {link.label} ]
+              </span>
             </Link>
           ))}
         </div>
         <span className="flex items-center gap-1">
           <a
             href="https://cs.uwatering.com/#https://brucewang15.vercel.app?nav=prev"
-            className="hover:opacity-80"
           >
-            ←
+            <span className="inline-block bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent grayscale transition-all duration-200 hover:grayscale-0">
+              ←
+            </span>
           </a>
           <a
             href="https://cs.uwatering.com/#https://brucewang15.vercel.app/"
@@ -46,9 +48,10 @@ export default function Footer() {
           </a>
           <a
             href="https://cs.uwatering.com/#https://brucewang15.vercel.app?nav=next"
-            className="hover:opacity-80"
           >
-            →
+            <span className="inline-block bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent grayscale transition-all duration-200 hover:grayscale-0">
+              →
+            </span>
           </a>
         </span>
       </div>

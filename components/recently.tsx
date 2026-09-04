@@ -4,7 +4,7 @@ import SectionHeading from "./effects/section-heading"
 
 const recentlyItems = [
   "Playing table tennis",
-  "Learning more about systems and distributed systems architecture",
+  "Learning about systems and distributed systems",
   "Diving into sandboxes",
 ]
 
@@ -12,7 +12,7 @@ export default function Recently() {
   return (
     <section id="recently">
       <SectionHeading title="Recently" variant="recently">
-        <ul className="space-y-2.5 text-xs md:text-base text-black dark:text-white">
+        <ul className="space-y-2 text-xs md:text-base text-black dark:text-white">
           {recentlyItems.map((item) => (
             <li key={item} className="flex items-center gap-2.5 leading-relaxed">
               <span

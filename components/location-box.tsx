@@ -48,7 +48,7 @@ export default function LocationBox() {
       description={
         <div className="flex flex-col h-full">
           <div className="flex-1 flex items-center justify-center">
-            <div className="h-[28rem] w-[28rem] -translate-y-19.5">
+            <div className="h-[28rem] w-[28rem] -translate-y-8">
               <World globeConfig={globeConfig} data={globeData} />
             </div>
           </div>
