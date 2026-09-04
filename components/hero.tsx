@@ -1,7 +1,9 @@
 "use client"
 
+import Link from "next/link"
 import { GradientText } from "./effects/GradientText"
-import OrgName from "./effects/org-name"
+import HoverUnderline from "./effects/HoverUnderline"
+import OrgName from "./effects/OrgName"
 
 export default function Hero() {
   return (
@@ -47,8 +49,23 @@ export default function Hero() {
         environments and sandbox tooling.
         <br />
         <br />
-        I&apos;m a software engineer who loves digging into distributed
-        systems and learning more about the operating system.
+        Feel free to reach out to me on{" "}
+        <Link
+          href="https://linkedin.com/in/brucewang15"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-black dark:text-white"
+        >
+          <HoverUnderline>linkedin</HoverUnderline>
+        </Link>{" "}
+        or by {" "}
+        <Link
+          href="mailto:b225wang@uwaterloo.ca"
+          className="font-bold text-black dark:text-white"
+        >
+          <HoverUnderline>email</HoverUnderline>
+        </Link>{" "}
+        to chat.
       </p>
     </section>
   )

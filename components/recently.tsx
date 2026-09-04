@@ -4,7 +4,7 @@ import SectionHeading from "./effects/section-heading"
 
 const recentlyItems = [
   "Playing table tennis",
-  "Learning about systems and distributed systems",
+  "Learning about systems, distributed systems and infra",
   "Diving into sandboxes",
 ]
 

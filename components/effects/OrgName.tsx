@@ -2,9 +2,9 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import HoverUnderline from "./HoverUnderline"
 
 interface OrgNameProps {
   src: string
@@ -46,21 +46,7 @@ export default function OrgName({
           className="object-contain"
         />
       </span>
-      <span className="relative inline-block">
-        {name}
-        <span
-          className="absolute left-0 right-0 bottom-[3px] h-px bg-neutral-400 dark:bg-neutral-500"
-          aria-hidden="true"
-        />
-        <motion.span
-          className="absolute left-0 right-0 bottom-[3px] h-px bg-black dark:bg-white"
-          initial={false}
-          animate={{ scaleX: hovered ? 1 : 0 }}
-          transition={{ duration: 0.28, ease: "easeOut" }}
-          style={{ transformOrigin: hovered ? "left center" : "right center" }}
-          aria-hidden="true"
-        />
-      </span>
+      <HoverUnderline hovered={hovered}>{name}</HoverUnderline>
     </Link>
   )
 }
