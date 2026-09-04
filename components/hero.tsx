@@ -12,7 +12,7 @@ export default function Hero() {
         </h1>
       </div>
 
-      <p className="text-xs md:text-base text-foreground leading-10">
+      <p className="text-base text-foreground leading-8">
         I&apos;m currently studying computer science at{" "}
         <OrgName
           src="/waterloo_logo.png"

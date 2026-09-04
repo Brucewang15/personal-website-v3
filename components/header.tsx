@@ -35,7 +35,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <nav className="flex space-x-4 sm:space-x-6">
               {navigationLinks.map((link) => (
-                <Link key={link.path} href={link.path} className="text-sm sm:text-base group">
+                <Link key={link.path} href={link.path} className="text-base group">
                   {isActive(link.path) ? (
                     <GradientText2 bold variant="sunset">{link.name}</GradientText2>
                   ) : (

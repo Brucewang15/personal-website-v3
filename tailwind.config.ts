@@ -19,6 +19,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "footer-wide": "720",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

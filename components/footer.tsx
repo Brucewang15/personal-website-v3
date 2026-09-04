@@ -13,8 +13,8 @@ export default function Footer() {
 
   return (
     <footer className="py-6 text-foreground">
-      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 text-base text-foreground w-full">
-        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+      <div className="flex flex-col footer-wide:flex-row footer-wide:items-center footer-wide:justify-between gap-y-3 gap-x-3 text-base text-foreground w-full">
+        <div className="flex flex-wrap items-center justify-center footer-wide:justify-start gap-x-3 gap-y-2">
           {links.map((link) => (
             <Link
               key={link.label}
@@ -27,7 +27,7 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <span className="flex items-center gap-1">
+        <span className="flex items-center justify-center footer-wide:justify-start gap-1">
           <a
             href="https://cs.uwatering.com/#https://brucewang15.vercel.app?nav=prev"
           >
