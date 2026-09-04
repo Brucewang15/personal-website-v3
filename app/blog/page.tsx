@@ -1,7 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
+import Footer from "@/components/footer";
+import PageSections from "@/components/page-sections";
+import BlogComponent from "@/components/blog";
 
-export default function Blog() {
-  return <div className="mt-20">Work in progress</div>;
+export default function ProjectsPage() {
+  return (
+    <PageSections>
+      <BlogComponent />
+      <Footer />
+    </PageSections>
+  )
 }
