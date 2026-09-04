@@ -47,8 +47,8 @@ export default function Projects() {
     }
   ]
   return (
-    <section id="projects" className="py-8">
-      <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-left">
+    <section id="projects" className="space-y-6 mt-8">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-left">
         <GradientText>Projects</GradientText>
       </h2>
       <p className="text-base text-foreground mt-4 mb-12">Some things I&apos;ve built</p>

@@ -5,9 +5,9 @@ import OrgName from "./effects/org-name"
 
 export default function Hero() {
   return (
-    <section className="flex flex-col text-left pt-8 space-y-4">
+    <section className="flex flex-col text-left pt-8 space-y-6">
       <div>
-        <h1 className="text-3xl md:text-4xl font-semibold mb-2">
+        <h1 className="text-3xl md:text-4xl font-semibold">
           <GradientText>Bruce Wang</GradientText>
         </h1>
       </div>

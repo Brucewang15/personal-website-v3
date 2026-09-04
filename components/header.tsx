@@ -18,7 +18,7 @@ export default function Header() {
 
   const navigationLinks = [
     { name: "Home", path: "/" },
-    { name: "Experience", path: "/experience" },
+    { name: "Blog", path: "/blog" },
     { name: "Projects", path: "/projects" },
     { name: "Resume", path: "/resume" },
   ]
