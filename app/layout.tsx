@@ -26,7 +26,7 @@ export default function RootLayout({
           <div className="min-h-screen bg-background w-full overflow-x-hidden relative">
             <Header />
             <Spotlight />
-            <main className="mx-auto px-4 py-8 max-w-[560px]">{children}</main>
+            <main className="mx-auto px-4 py-8 max-w-[600px]">{children}</main>
           </div>
         </ThemeProvider>
         <Analytics />
